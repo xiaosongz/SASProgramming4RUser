@@ -2,6 +2,9 @@
 .Rhistory
 .Rapp.history
 
+# SAS data files
+.sas7bdat
+
 # Session Data files
 .RData
 
