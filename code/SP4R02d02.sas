@@ -6,16 +6,19 @@
 /*SP4R02d02*/
 
 /*Import data using a DATA step*/
+
+libname sp4r "&path";
+
 data sp4r.all_names;
    length First_Name $ 25 Last_Name $ 25;
-   infile "&path\allnames.csv" dlm=',';
+   infile "&path/data/allnames.csv" dlm=',';
    input First_Name $ Last_Name $ age height;
 run;
 
 /***************************************************************************************************/
 /*Import data using PROC IMPORT*/
 proc import out=sp4r.baseball 
-   datafile= "&path\baseball.csv" DBMS=CSV REPLACE;
+   datafile= "&path/data/baseball.csv" DBMS=CSV REPLACE;
    getnames=yes;
    datarow=2; 
 run;

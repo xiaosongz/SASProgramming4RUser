@@ -8,7 +8,7 @@
 /*This program creates the SP4R library and connects it to the saved data sets.*/
 
 /*Change this path to the appropriate location*/
-%let path = s:\workshop;
+%let path = /folders/myshortcuts/SASProgramming4RUser;
 
 /*
 This course will use the library name sp4r.
