@@ -8,7 +8,7 @@
 /*Part A*/
 data sp4r.random (drop=i);
    call streaminit(123);
-   do i=1 to 10;
+   do i=1 to 1000;
       rnorm = rand('Normal',20,5);
       rbinom = rand('Binomial',.25,1);
       runif = rand('Uniform')*10;
@@ -20,7 +20,9 @@ run;
 proc print data=sp4r.random;
 run;
 
-/*Part B*/
+/*Part B add new random variable to existing dataset*/
+
+/* DO NOT ADD ANOTHER DO LOOP */
 data sp4r.random;
    call streaminit(123);
    set sp4r.random;
@@ -30,7 +32,8 @@ run;
 proc print data=sp4r.random;
 run;
 
-/*Part C*/
+/*Part C	NESTED DO LOOP*/
+/* Could be use to gernerate ANOVA Dataset */
 data sp4r.doloop (drop=j);
    call streaminit(123);
    do group=1 to 5;
