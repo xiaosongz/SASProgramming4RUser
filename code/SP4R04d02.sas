@@ -59,7 +59,7 @@ run;
 /*Part D*/
 data sp4r.series_data (keep=x y1 y2);
    call streaminit(123);
-   do x=1 to 30;
+   do x=1 to 80;
       beta01 = 10;
       beta11 = 1;
       y1 = beta01 + beta11*x + rand('Normal',0,5);
