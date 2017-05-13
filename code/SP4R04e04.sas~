@@ -24,8 +24,9 @@ proc sgplot ;
 	yaxis label="Y Values" min=15 max=65;
 run;
 
-/* c.Alter the previous plot by changing the SCATTER statement
+/* c.Alter the previous plot by changing the SCATTER statement 
 to NEEDLE and the REG statement to PBSPLINE. */
+
 proc sgplot ;
 	pbspline x=x y=y / lineattrs=(color=red pattern=dot) legendlabel="Scattered";
 	needle x=x y=y / markerattrs=(color=blue symbol=STARFILLED) 
