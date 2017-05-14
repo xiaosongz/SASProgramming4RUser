@@ -5,6 +5,12 @@
 
 /*SP4R05d01*/
 
+/* Question 5.1 */
+proc freq data=sp4r.cars;
+   tables origin*type / chisq;
+run;
+
+
 /*Part A*/
 proc contents data=sp4r.ameshousing varnum;
 run;
