@@ -5,6 +5,7 @@
 
 /*SP4R05e03*/
 
+
 data _NULL_;
    x=-3;
    df=5;
@@ -19,6 +20,9 @@ proc means data=sp4r.ameshousing;
 var saleprice;
 output out=stats median=sp_med;
 run;
+
+
+/*Use symputx to create global macro varible inside a data step */
 data _null_; set stats;
 call symputx('med',sp_med);
 run;

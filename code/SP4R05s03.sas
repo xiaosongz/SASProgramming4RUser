@@ -15,6 +15,7 @@ run;
 
 %put The significance level for the two-tailed t test is &sig_level;
 
+%put &sig_level;
 /*Part B*/
 proc means data=sp4r.ameshousing;
    var saleprice;
